@@ -1,0 +1,18 @@
+6. Find the output of the following // Consider the compiler is 32-bit machine 
+
+Size of Structure = sizeof(int) + sizeof(char) + sizeof(char) = 4 + 1 + 1 = 6 bytes
+
+output : Size of Structure = 6
+
+
+7.Find the output of the following // Consider the compiler is 32-bit machine
+
+Size of Structure = sizeof(char) + sizeof(double) + sizeof(char) = 1 + 8 + 1 = 10 bytes
+
+Output : Size of Structure = 10
+
+8.Find the output of the following // Consider the compiler is 32-bit machine
+
+the given code is reversing the number 12345678
+
+output: 87654321
