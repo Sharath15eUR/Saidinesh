@@ -1,0 +1,68 @@
+1. Which signals are triggered, when the following actions are performed.
+
+a. user press ctrl+C
+-> SIGINT signal is triggered.
+-> ctrl+c is equivalent to the SIGINT signal which is used to terminate the process that is currently running.
+-> when user enter ctrl+c an default signal handler of SIGINT is executed to terminate the process.
+
+
+b. kill() system call is invoked
+-> the kill() system call is used to send the signal to process or group of processes.
+-> the kill() function takes the two arguments of processID(pid) and type of signal.
+-> by using the arguments for the particular process the particularsignal is sent.
+
+c. CPU tried to execute an illegal instruction
+-> SIGILL(illegal instruction signal) is triggered when cpu tried to execute an illegal instruction.
+-> if the user code consists of an illegal or unsupported code then this signal is sent by os.
+
+d. When the program access the unassigned memory
+-> segmentation fault signal(SIGSEGV) is triggered when the program is trying to access the memory that is not allocatedd to the program.
+-> the os sends this signal and terminates the program.
+
+2. List the gdb command for the following operations
+
+a. To run the current executable file
+-> run
+-> run command is used to run the current executable file.
+-> any kind of command line arguments can be give after the run.
+
+b. To create breakpoints at specific function
+-> break function_name
+-> when the program execution reaches this function then the program pause and allows to check with the program state.
+
+c. To resume execution once after breakpoint
+-> continue
+-> this continue command is used to resume the pause that is created by the break command at an function.
+
+d. To clear break point created for a function
+-> clear function_name
+-> this command is used to clear the breakpoints that are set to the function prior.
+
+e. Print the parameters of the function in the backtrace
+-> bt
+-> this command displays the function call stack in back tree.
+
+
+6. How to avoid Race conditions and deadlocks?
+
+-> using timeouts
+-> using critical section
+-> testing and debugging 
+-> avoiding the shared state
+
+7. What is the difference between exec and fork ?
+fork():
+->fork() is used to create a new process, known as the child process, which is a copy of the calling (parent) process.
+After a successful fork() two identical processes are created the parent process and the child process.
+but both shares the same code having different memory space.
+
+exec():
+->exec() is used to execute a new program in the current process space effectively replacing the current process's 
+memory image with the image of a new program.
+
+8. What is the difference between process and threads?
+
+-> Process: A process is an instance of a running program. 
+It consists of an executable program, its associated data, and the execution context needed for the program to run.
+
+-> Thread: it is the smallest unit of execution with in a process.
