@@ -1,0 +1,24 @@
+1. Connection procedure in client-server communication:
+
+
+a. first the server and client starts by creating an socket. -> socket() two types of sockets datagaram(UDP) and stream sockets (TCP)
+b. The server binds to a well known address. -> bind()
+c. server starts listening for incoming connections. -> listen()
+c. The client initiates a connection request by specifying the server's address and port.->  connect()
+d. The server accepts the connection request. -> accept()
+e. Once the connection is established, data exchange can occur between the client and the server.->  send() recv()
+f. After the communication is complete, either the client or the server can close the connection. 
+
+
+2. Use of bind() function in socket programming:
+
+-> In socket programming, the bind() function is used to associate a socket with a specific network address (IP address and port number). 
+-> This is necessary for servers, as they need to specify the port they will be listening on. 
+-> For clients, bind() is generally not used, as the operating system automatically assigns an available local port when the client initiates communication. 
+-> Without bind(), the server wouldn't know which port to listen on.
+
+3. Datagram Socket:
+
+-> A datagram socket is a type of socket used in networking for sending and receiving packets of data known as datagrams. 
+-> Datagram sockets operate independently of each other. 
+-> They are connectionless, meaning there is no established connection before data transfer, and each packet is treated as an independent message.
